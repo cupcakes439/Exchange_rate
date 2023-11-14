@@ -1,7 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 body {
-
+    background-image: url(./Assets/Images/Rate\ Exchange.webp);
+    background-size: cover;
 }
 
-li:last-child {
-
+main {
+    font-family: 'Mulish' , 'serif';
+    text-align: center;
 }
+
+h1 {
+    color: #FF8800;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.div1 {
+   color: #FF8800;
+   font-size: 1.5rem;
+   border: 2px solid skyblue;
+   margin: 4vh 20vw;
+   padding: 30px 30px;
+   border-radius: 10px;
+   background-color: rgb(135, 206, 235, 0.4);
+}
+
+#input {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 50%;
+    height: 35px;
+}
+
+button {
+    border: 0px solid #FF8800;
+    border-radius: 5px;
+    background-color: #FF8800;
+    color: white;
+    width: 30%;
+    height: 30px;
+    cursor: pointer;
+}
+
+.div2 {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding-top: 30px;
+}
+/* #4BB565 */
