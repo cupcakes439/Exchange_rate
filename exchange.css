@@ -48,4 +48,19 @@ button {
     gap: 45px;
     padding-top: 30px;
 }
-/* #4BB565 */
+
+.div3 {
+    background-color: skyblue;
+    border: 1px solid #FF8800;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.div4 {
+    background-color: skyblue;
+    border: 1px solid #FF8800;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
