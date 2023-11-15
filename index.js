@@ -7,34 +7,34 @@ const div3 = document.querySelector(".div3")
 const div4 = document.querySelector(".div4")
 
 const dollars = async ()=> {
-    const datas = await fetch()
+    const datas = await fetch("https://api.frankfurter.app/latest?from=ZAR")
     const data = await datas.json()
-    return (data)
+    return (data.rates.USD)
+}
+
+const southSigns = async ()=> {
+    const datas = await fetch("https://api.frankfurter.app/latest?from=ZAR")
+    const data = await datas.json()
+    return (data.base)
+}
+
+const souths = async ()=> {
+    const datas = await fetch("https://api.frankfurter.app/latest?from=USD")
+    const data = await datas.json()
+    return (data.rates.ZAR)
 }
 
 const dollarSigns = async ()=> {
-    const datas = await fetch()
+    const datas = await fetch("https://api.frankfurter.app/latest?from=USD")
     const data = await datas.json()
-    return (data)
-}
-
-const nairas = async ()=> {
-    const datas = await fetch()
-    const data = await datas.json()
-    return (data)
-}
-
-const nairaSigns = async ()=> {
-    const datas = await fetch()
-    const data = await datas.json()
-    return (data)
+    return (data.base)
 }
 
 radio1.addEventListener("click" , ()=> {
     btn1.addEventListener("click" , async ()=> {
-        const naira = await nairas()
-        const nairaSign = await nairaSigns()
-        div3.textContent = `You have ${input.value * naira}${nairaSign}`
+        const south = await souths()
+        const southSign = await southSigns()
+        div3.textContent = `You have ${input.value * south}${southSign}`
     })
     btn2.addEventListener("click" , async ()=> {
         const dollarSign = await dollarSigns()
@@ -50,15 +50,8 @@ radio2.addEventListener("click" , ()=> {
         div4.textContent = `You have ${input.value * dollar}${dollarSign}`
     })
     btn1.addEventListener("click" , async ()=> {
-        const nairaSign = await nairaSigns()
-        div3.textContent = `You have ${input.value}${nairaSign}`
+        const southSign = await southSigns()
+        div3.textContent = `You have ${input.value}${southSign}`
         input.value = ""
     })
 })
-
-const data = async ()=> {
-    const host = await fetch("https://api.coinbase.com/v2/prices/ETH-USD/buy")
-    const datas = await host.json()
-    console.log(datas)
-}
-data()
