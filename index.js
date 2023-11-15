@@ -55,3 +55,10 @@ radio2.addEventListener("click" , ()=> {
         input.value = ""
     })
 })
+
+const data = async ()=> {
+    const host = await fetch("https://api.coinbase.com/v2/prices/ETH-USD/buy")
+    const datas = await host.json()
+    console.log(datas)
+}
+data()
